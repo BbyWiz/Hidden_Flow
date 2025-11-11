@@ -1,5 +1,0 @@
-<form [formGroup]="form" (ngSubmit)="emit()" autocomplete="off" novalidate>
-    <label for="symbol">Ticker</label>
-    <input id="symbol" formControlName="symbol" inputmode="latin" maxlength="5" />
-    <button type="submit" [disabled]="form.invalid || busy">Screen</button>
-</form>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Intelligent_Stock_Screener": {
+    "client": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Intelligent_Stock_Screener:build:production"
+              "buildTarget": "client:build:production"
             },
             "development": {
-              "buildTarget": "Intelligent_Stock_Screener:build:development"
+              "buildTarget": "client:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,6 @@
           "builder": "@angular/build:extract-i18n"
         },
         "test": {
-          "builder": "@angular/build:karma",
           "options": {
             "polyfills": [
               "zone.js",

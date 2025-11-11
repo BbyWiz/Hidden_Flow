@@ -4,9 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test:api && npm run test:web",
-    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w server\" \"npm run start -w client\" \"npm run dev --prefix server\" \"npm run start --prefix client\"",
-    "dev:api": "npm run dev -w server",
-    "dev:web": "npm run start -w client",
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev --prefix server\" \"npm run start --prefix client\"",
+    "dev:api": "npm run dev --prefix server",
+    "dev:web": "npm run start --prefix client",
     "format": "prettier \"**/*.{ts,js,css,html,json,md}\" --write",
     "test:api": "npm --prefix server test",
     "test:web": "npm --prefix client test -- --watch=false",
@@ -26,5 +26,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3"
+  }
 }
