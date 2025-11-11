@@ -1,26 +1,18 @@
-````markdown
-[text](https://www.npmjs.com/package/yahoo-finance2)
 
 # Yahoo Finance API Reference (via `yahoo-finance2` npm module)
+reference: (https://www.npmjs.com/package/yahoo-finance2)
 
-This document summarizes the commonly used endpoints and parameters available through the **Yahoo Finance** unofficial API wrapper **`yahoo-finance2`**, which provides reliable market, fundamental, and historical data without the need for an API key.
+This document summarizes the commonly used endpoints and parameters available through the **Yahoo Finance** unofficial API wrapper **`yahoo-finance2`**, which provides reliable market, fundamental, and historical data. API key provided by Yahoo Developer webpage.
 
 ---
 
 ## Overview
-
-Unlike Alpha Vantage, **Yahoo Finance** access through this module does not require authentication or an API key.  
-It can be installed via npm and used directly in Node.js:
-
-```bash
+ 
+bash:
 npm install yahoo-finance2
 ````
 
-Import and initialize:
-
-```js
-import yahooFinance from 'yahoo-finance2';
-```
+ 
 
 ---
 
@@ -100,12 +92,7 @@ console.log(results.quotes);
 
 ---
 
-## Notes
-
-* **No API key required** — data is scraped and parsed from Yahoo’s public finance endpoints.
-* Ideal for **screeners**, **dashboards**, and **analysis tools**.
-* Rate limits are client-side (throttled by Yahoo if abused, not API-enforced).
-* For stability, cache responses or limit queries per second.
+ 
 
 ---
 
