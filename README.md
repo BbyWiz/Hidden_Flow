@@ -22,18 +22,6 @@ import yahooFinance from 'yahoo-finance2';
 
 ---
 
-## Optional / Advanced Endpoints
-
-| Function           | Description                                                                   | Example                                                              |
-| ------------------ | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| **insights**       | Returns key insights such as ESG scores, sentiment, and technical indicators. | `await yahooFinance.insights('AAPL');`                               |
-| **options**        | Fetches option chain data (calls, puts, strikes, expirations).                | `await yahooFinance.options('TSLA');`                                |
-| **chart**          | Provides raw chart data with historical pricing and indicators.               | `await yahooFinance.chart('NVDA', { interval: '1d', range: '1y' });` |
-| **quoteCombine**   | Combines `quote` and `quoteSummary` data for a single request.                | `await yahooFinance.quoteCombine('NFLX');`                           |
-| **marketSummary**  | Returns a snapshot of market indexes (Dow, Nasdaq, etc.).                     | `await yahooFinance.marketSummary();`                                |
-| **marketTrending** | Returns trending tickers globally.                                            | `await yahooFinance.marketTrending();`                               |
-
----
 
 ## Parameters for Common Calls
 
@@ -46,46 +34,6 @@ import yahooFinance from 'yahoo-finance2';
 | **region**            | No       | Region for market/trending queries (e.g. `US`, `GB`, `IN`).                                                    |
 
 ---
-
-## Example Use Cases
-
-### Fetch Latest Quote
-
-```js
-const quote = await yahooFinance.quote('AAPL');
-console.log(quote.regularMarketPrice);
-```
-
-### Historical Prices for a Time Range
-
-```js
-const data = await yahooFinance.historical('MSFT', {
-  period1: '2024-01-01',
-  period2: '2025-01-01',
-  interval: '1d'
-});
-console.log(data.slice(-5));
-```
-
-### Company Fundamentals
-
-```js
-const fundamentals = await yahooFinance.quoteSummary('GOOG', {
-  modules: ['financialData', 'summaryDetail', 'price']
-});
-console.log(fundamentals);
-```
-
-### Search by Company Name
-
-```js
-const results = await yahooFinance.search('Nvidia');
-console.log(results.quotes);
-```
-
----
-
- 
 
 ---
 
