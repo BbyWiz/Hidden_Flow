@@ -10,26 +10,38 @@ const PORT = process.env.PORT || 4300;
 const apiRouter = require("./routes/router");
 const openapiPath = path.join(__dirname, "openapi.yaml");
 
-app.use(session({ secret: "dev", resave: false, saveUninitialized: true }));
 
-app.use("/", require("./auth/yahoo_auth"));  
-app.use("/api", require("./routes/router"));  
 app.use(express.json());
 app.use(
   cors({
     origin: true,
-    methods: ["GET"],
+    methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     maxAge: 86400,
   })
 );
 
+app.use(
+  session({
+    secret: "dev",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
 // routes
-app.router.stack
-  .filter((r) => r.route)
-  .forEach((r) =>
-    console.log(`hello!!!!!! ${Object.keys(r.route.methods)}, ${r.route.path}`)
-  );
+app.use("/", yahooAuth);
+app.use("/api", apiRouter);
+
+if (app._router && app._router.stack) {
+  app._router.stack
+    .filter((r) => r.route)
+    .forEach((r) => {
+      console.log(
+        `hello!!!!!! ${Object.keys(r.route.methods)}, ${r.route.path}`
+      );
+    });
+}
 
 // Swagger UI
 if (fs.existsSync(openapiPath)) {

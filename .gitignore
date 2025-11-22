@@ -5,3 +5,4 @@ ignoreme.txt
 openapi.yaml
 /temp/
 /temp/*
+node_modules
