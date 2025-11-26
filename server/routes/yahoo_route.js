@@ -4,6 +4,7 @@ const yahoo = require("../models/yahoo_model");
 const { computePE } = require("../app/pe");
 const { computeSMA } = require("../app/sma");
 const { computeRSI } = require("../app/rsi");
+const { summarizeScreenPayload } = require("../app/summary");
 
 // GET /api/yahoo/quote-summary?symbol=TSLA&modules=price,defaultKeyStatistics
 router.get("/yahoo/quote-summary", async (req, res) => {
@@ -80,16 +81,13 @@ router.post("/yahoo/screen", async (req, res) => {
   try {
     const body = req.body || {};
 
-    // 1. Basic inputs
     const symbol = String(body.symbol || "")
       .trim()
       .toUpperCase();
-
     if (!symbol) {
       return res.status(400).json({ error: "symbol is required" });
     }
 
-    // Optional tuning, defaults are small and fast
     const smaWindow =
       typeof body.smaWindow === "number" && body.smaWindow > 0
         ? body.smaWindow
@@ -103,7 +101,7 @@ router.post("/yahoo/screen", async (req, res) => {
     const historyOpts = body.history || {};
     const { period1, period2, interval } = historyOpts;
 
-    // 2. Fetch history and quote in parallel
+    // Fetch history and quote in parallel
     const [rows, quote] = await Promise.all([
       yahoo.historical(symbol, { period1, period2, interval }),
       yahoo.quote(symbol),
@@ -117,16 +115,14 @@ router.post("/yahoo/screen", async (req, res) => {
 
     const latestBar = rows[rows.length - 1];
 
-    // 3. Indicators (raw numeric values)
-    const smaValue = computeSMA(rows, smaWindow); // last N closes
-    const rsiValue = computeRSI(rows, rsiPeriod); // last N+1 closes
-    const peValue = computePE(quote); // from live quote
+    // Indicator calculations
+    const smaValue = computeSMA(rows, smaWindow);
+    const rsiValue = computeRSI(rows, rsiPeriod);
+    const peValue = computePE(quote);
 
-    // 4. Rule flags based on those indicators
     const latestClose =
       typeof latestBar?.close === "number" ? latestBar.close : null;
 
-    // Above or below SMA
     const aboveSMA =
       latestClose != null && typeof smaValue === "number"
         ? latestClose > smaValue
@@ -137,18 +133,13 @@ router.post("/yahoo/screen", async (req, res) => {
         ? latestClose < smaValue
         : null;
 
-    // RSI zones
     const oversold = typeof rsiValue === "number" ? rsiValue < 30 : null;
-
     const overbought = typeof rsiValue === "number" ? rsiValue > 70 : null;
 
-    // Simple valuation taste test
     const cheapPE = typeof peValue === "number" ? peValue < 20 : null;
-
     const expensivePE = typeof peValue === "number" ? peValue > 40 : null;
 
-    // 5. Response payload
-    return res.json({
+    const payload = {
       symbol,
 
       history: {
@@ -189,6 +180,13 @@ router.post("/yahoo/screen", async (req, res) => {
         cheapPE,
         expensivePE,
       },
+    };
+
+    const summary = await summarizeScreenPayload(payload);
+
+    return res.json({
+      ...payload,
+      summary,
     });
   } catch (e) {
     console.error("screen endpoint error", e);

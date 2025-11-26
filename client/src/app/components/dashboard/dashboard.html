@@ -2,7 +2,7 @@
   <div class="container">
     <a class="navbar-brand" href="#"></a>
     <span class="navbar-text text-light small">
-      Backend: POST /api/yahoo/screen
+      Market Sentiment Summary
     </span>
   </div>
 </nav>
@@ -19,14 +19,8 @@
           <form (ngSubmit)="runScreen()" #screenForm="ngForm">
             <div class="mb-3">
               <label for="symbol" class="form-label">Symbol</label>
-              <input
-                id="symbol"
-                type="text"
-                class="form-control text-uppercase"
-                name="symbol"
-                [(ngModel)]="symbol"
-                required
-              >
+              <input id="symbol" type="text" class="form-control text-uppercase" name="symbol" [(ngModel)]="symbol"
+                required>
               <div class="form-text">
                 Example: AAPL, MSFT, TSLA
               </div>
@@ -34,33 +28,15 @@
 
             <div class="mb-3">
               <label for="smaWindow" class="form-label">SMA window (days)</label>
-              <input
-                id="smaWindow"
-                type="number"
-                class="form-control"
-                name="smaWindow"
-                [(ngModel)]="smaWindow"
-                min="2"
-              >
+              <input id="smaWindow" type="number" class="form-control" name="smaWindow" [(ngModel)]="smaWindow" min="2">
             </div>
 
             <div class="mb-3">
               <label for="rsiPeriod" class="form-label">RSI period</label>
-              <input
-                id="rsiPeriod"
-                type="number"
-                class="form-control"
-                name="rsiPeriod"
-                [(ngModel)]="rsiPeriod"
-                min="2"
-              >
+              <input id="rsiPeriod" type="number" class="form-control" name="rsiPeriod" [(ngModel)]="rsiPeriod" min="2">
             </div>
 
-            <button
-              type="submit"
-              class="btn btn-primary w-100"
-              [disabled]="screenForm.invalid || isLoading"
-            >
+            <button type="submit" class="btn btn-primary w-100" [disabled]="screenForm.invalid || isLoading">
               <span *ngIf="!isLoading">Run screen</span>
               <span *ngIf="isLoading">
                 <span class="spinner-border spinner-border-sm me-2" role="status"></span>
@@ -104,13 +80,13 @@
               </p>
             </div>
             <div class="col-md-6">
-              <h6>Valuation</h6>
+              <h6>Valuation (Price-to-EPS)</h6>
               <p class="mb-1">
-                <strong>Trailing P E:</strong>
+                <strong>Trailing P/E:</strong>
                 {{ result.indicators?.pe ?? result.quote?.trailingPE | number:'1.2-2' }}
               </p>
               <p class="mb-0">
-                <strong>Forward P E:</strong>
+                <strong>Forward P/E:</strong>
                 {{ result.quote?.forwardPE | number:'1.2-2' }}
               </p>
             </div>
@@ -182,6 +158,16 @@
               </span>
             </div>
           </div>
+          @if(result.summary){
+          <div class="card mt-3">
+            <div class="card-header">
+              Summary
+            </div>
+            <div class="card-body">
+              <p class="mb-0">{{ result.summary }}</p>
+            </div>
+          </div>
+          }
 
           <p class="text-muted small mt-3">
             Green badge means the rule is true, grey means false, pale badge means data is missing.

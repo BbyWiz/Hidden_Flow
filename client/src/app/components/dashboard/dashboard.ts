@@ -1,9 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { RouterOutlet } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { stockInformation } from '../../models/stock-information';
+import { Yahoo } from '../../services/yahoo';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,40 +12,34 @@ import { stockInformation } from '../../models/stock-information';
   styleUrl: './dashboard.css',
 })
 export class Dashboard {
-  //  title = 'Stock Screener Dashboard';
-
-  private apiBaseUrl = 'http://localhost:4300/api';
-  private ngrokUrl = '';
-
   symbol = 'AAPL';
   smaWindow = 7;
   rsiPeriod = 7;
+  summary = '';
 
   isLoading = false;
   error: string | null = null;
   result: stockInformation | null = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(private yahoo: Yahoo) {}
 
+  //Validates the stock symbol input and initiates a screening request with the 
+  // specified technical analysis parameters (SMA window, RSI period) to retrieve and display stock data.
+   
   runScreen(): void {
     this.error = null;
     this.result = null;
+
     const trimmed = (this.symbol || '').trim().toUpperCase();
-    if (!trimmed || trimmed == '') {
+    if (!trimmed) {
       this.error = 'Symbol is required';
+      this.isLoading = false;
       return;
     }
 
     this.isLoading = true;
 
-    const body = {
-      symbol: trimmed,
-      smaWindow: this.smaWindow,
-      rsiPeriod: this.rsiPeriod,
-      //plan to add a history block here to override defaults
-    };
-
-    this.http.post<stockInformation>(`${this.apiBaseUrl}/yahoo/screen`, body).subscribe({
+    this.yahoo.screen(trimmed, this.smaWindow, this.rsiPeriod, this.summary).subscribe({
       next: (data) => {
         this.result = data;
         this.isLoading = false;
@@ -57,7 +51,7 @@ export class Dashboard {
       },
     });
   }
-
+//bootstrap helper classes
   getRuleBadgeClass(flag: boolean | null | undefined): string {
     if (flag === true) {
       return 'badge bg-success';

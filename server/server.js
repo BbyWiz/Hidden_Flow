@@ -63,7 +63,6 @@ app.get("/", (req, res) => {
     docs: "/docs",
   });
 });
-
 // TROUBLESHOOTING
 // ["FMP_API_KEY", "FMP_URL"].forEach((k) =>
 //   console.log(`[env] ${k}=${process.env[k] ? `${k.length}` : "(MISSING)"}`)

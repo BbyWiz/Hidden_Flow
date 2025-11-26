@@ -44,4 +44,5 @@ export interface stockInformation {
   quote?: QuoteInfo;
   indicators?: Indicators;
   rules?: Rules;
+  summary?: string;
 }
