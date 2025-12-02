@@ -2,7 +2,7 @@
   <div class="col-12 col-sm-8 col-md-6 col-lg-4">
     <div class="card shadow-sm">
       <div class="card-body">
-        <h1 class="h4 text-center mb-3">Test Login</h1>
+        <h1 class="h4 text-center mb-3">Login</h1>
 
         <div class="alert alert-warning small" role="alert">
           This is a test environment. Do not use real passwords. Use a fake password
@@ -14,7 +14,7 @@
             <label class="form-label" for="username">Username</label>
             <input id="username" name="username" type="text" class="form-control" [(ngModel)]="username" required
               maxlength="20" />
-            <div class="form-text">
+            <div class="form-text text-muted">
               Any name is fine for testing.
             </div>
             @if (loginForm.submitted && !username) {
@@ -28,7 +28,7 @@
             <label class="form-label" for="password">Password</label>
             <input id="password" name="password" type="password" class="form-control" [(ngModel)]="password" required
               maxlength="7" />
-            <div class="form-text">
+            <div class="form-text text-muted">
               Use a fake password (7 characters or less). Do not reuse real credentials.
             </div>
             @if (loginForm.submitted && !password) {
@@ -41,7 +41,7 @@
           <div class="mb-3 form-check">
             <input class="form-check-input" type="checkbox" id="remember" name="remember" [(ngModel)]="remember" />
             <label class="form-check-label" for="remember">
-              Remember me on this device (test only)
+              Remember me on this device
             </label>
           </div>
 
