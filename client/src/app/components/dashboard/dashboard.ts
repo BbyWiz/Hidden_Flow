@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Screener } from '../screener/screener';
-import { Calendar } from '../calendar/calendar';
+import { Chart } from 'chart.js';
+import { Charts } from '../charts/charts';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [Screener, Calendar],
+  imports: [Screener, Charts],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })

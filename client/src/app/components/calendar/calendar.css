@@ -1,9 +1,0 @@
-.e-calendar .e-content span.e-day.e-today {
-  background-color: #28a745; 
-  color: #fff;
-  border-radius: 50%;
-}
-
-.e-calendar .e-content span.e-day:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}

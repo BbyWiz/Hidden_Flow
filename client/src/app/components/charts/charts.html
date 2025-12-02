@@ -1,0 +1,39 @@
+<div class="card shadow-sm">
+    <div class="card-body" style="font-family:Arial, Helvetica, sans-serif;">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 mb-0">Price History</h2>
+
+            <form class="d-flex gap-2" (ngSubmit)="loadHistory()">
+                <input type="text" class="form-control form-control-sm" style="max-width: 120px;" [(ngModel)]="symbol"
+                    name="symbol" placeholder="Symbol" />
+                <button type="submit" class="btn btn-primary btn-sm" [disabled]="loading">
+                    {{ loading ? 'Loading…' : 'Load' }}
+                </button>
+            </form>
+        </div>
+
+        @if (error) {
+        <div class="alert alert-danger py-2 small">
+            {{ error }}
+        </div>
+        }
+
+        <div class="chart-container" style="height: 300px;">
+            <canvas #chartCanvas></canvas>
+        </div>
+
+        <p class="small mt-2 mb-0 text-muted">
+            Chart displays recent closing prices and 20-period EMA/SMA for the selected
+            symbol from the Yahoo history endpoint.
+            <br /><br />
+            <span class="d-inline-block px-2 py-1 rounded border border-success">
+                Bulls: Should wait until price touches MA before purchase.
+            </span>
+            <br /><br />
+            <span class="d-inline-block px-2 py-1 rounded border border-danger">
+                Bears: Should short sell at whole numbers.
+            </span>
+            <br />
+        </p>
+    </div>
+</div>

@@ -1,7 +1,7 @@
-<div class="container my-4">
-  <div class="row g-4">
-    <!-- Left side: form -->
-    <div class="col-lg-4">
+<div class="container-fluid">
+  <div class="row g-3">
+    <!-- Left: form -->
+    <div class="col-12 col-lg-4">
       <div class="card shadow-sm">
         <div class="card-header">
           Screen a symbol
@@ -11,163 +11,161 @@
             <div class="mb-3">
               <label for="symbol" class="form-label">Symbol</label>
               <input id="symbol" type="text" class="form-control text-uppercase" name="symbol" [(ngModel)]="symbol"
-                required>
-              <div class="form-text">
-                Example: AAPL, MSFT, TSLA
-              </div>
+                required />
+              <div class="form-text">Example: AAPL, MSFT, TSLA</div>
             </div>
 
             <div class="mb-3">
               <label for="smaWindow" class="form-label">SMA window (days)</label>
-              <input id="smaWindow" type="number" class="form-control" name="smaWindow" [(ngModel)]="smaWindow" min="2">
+              <input id="smaWindow" type="number" class="form-control" name="smaWindow" [(ngModel)]="smaWindow"
+                min="2" />
             </div>
 
             <div class="mb-3">
               <label for="rsiPeriod" class="form-label">RSI period</label>
-              <input id="rsiPeriod" type="number" class="form-control" name="rsiPeriod" [(ngModel)]="rsiPeriod" min="2">
+              <input id="rsiPeriod" type="number" class="form-control" name="rsiPeriod" [(ngModel)]="rsiPeriod"
+                min="2" />
             </div>
 
             <button type="submit" class="btn btn-primary w-100" [disabled]="screenForm.invalid || isLoading">
-              <span *ngIf="!isLoading">Run screen</span>
-              <span *ngIf="isLoading">
+              @if (isLoading) {
+              <span>
                 <span class="spinner-border spinner-border-sm me-2" role="status"></span>
                 Loading
               </span>
+              } @else {
+              <span>Run screen</span>
+              }
             </button>
           </form>
         </div>
       </div>
 
-      <div *ngIf="error" class="alert alert-danger mt-3" role="alert">
+      @if (error) {
+      <div class="alert alert-danger mt-3" role="alert">
         {{ error }}
       </div>
+      }
     </div>
 
-    <!-- Right side: results -->
-    @if(result) {
-    <div class="col-lg-8">
-      <!-- Snapshot card -->
-      <div class="card shadow-sm mb-3">
-        <div class="card-header d-flex justify-content-between align-items-center">
-          <span>{{ result.symbol }} snapshot</span>
-          @if(result.quote?.currency){
-          <span class="badge bg-info text-dark">
-            {{ result.quote?.currency }}
-          </span>
-          }
-        </div>
-        <div class="card-body">
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <h6>Price</h6>
-              <p class="mb-1">
-                <strong>Regular market:</strong>
-                {{ result.quote?.regularMarketPrice | number:'1.2-2' }}
-              </p>
-              <p class="mb-1">
-                <strong>Latest close:</strong>
-                {{ result.latestBar?.close | number:'1.2-2' }}
-              </p>
-              <p class="mb-0">
-                <strong>Volume:</strong>
-                {{ result.latestBar?.volume | number }}
-              </p>
+    <!-- Right: results -->
+    @if (result) {
+    <div class="col-12 col-lg-8">
+      <div class="row g-3">
+        <!-- Snapshot -->
+        <div class="col-12">
+          <div class="card shadow-sm">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <span>{{ result.symbol }} snapshot</span>
+              @if (result.quote?.currency) {
+              <span class="badge bg-info text-dark">
+                {{ result.quote?.currency }}
+              </span>
+              }
             </div>
-            <div class="col-md-6">
-              <h6>Valuation (Price-to-EPS)</h6>
-              <p class="mb-1">
-                <strong>Trailing P/E:</strong>
-                {{ result.indicators?.pe ?? result.quote?.trailingPE | number:'1.2-2' }}
-              </p>
-              <p class="mb-0">
-                <strong>Forward P/E:</strong>
-                {{ result.quote?.forwardPE | number:'1.2-2' }}
-              </p>
-            </div>
-          </div>
+            <div class="card-body">
+              <div class="row mb-3">
+                <div class="col-12 col-md-6">
+                  <h6>Price</h6>
+                  <p class="mb-1">
+                    <strong>Regular market:</strong>
+                    {{ result.quote?.regularMarketPrice | number:'1.2-2' }}
+                  </p>
+                  <p class="mb-1">
+                    <strong>Latest close:</strong>
+                    {{ result.latestBar?.close | number:'1.2-2' }}
+                  </p>
+                  <p class="mb-0">
+                    <strong>Volume:</strong>
+                    {{ result.latestBar?.volume | number }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <h6>Valuation (Price-to-EPS)</h6>
+                  <p class="mb-1">
+                    <strong>Trailing P/E:</strong>
+                    {{ result.indicators?.pe ?? result.quote?.trailingPE | number:'1.2-2' }}
+                  </p>
+                  <p class="mb-0">
+                    <strong>Forward P/E:</strong>
+                    {{ result.quote?.forwardPE | number:'1.2-2' }}
+                  </p>
+                </div>
+              </div>
 
-          <h6>Indicators</h6>
-          <div class="row">
-            <div class="col-md-4">
-              <p class="mb-1">
-                <strong>SMA {{ result.indicators?.smaWindow }}:</strong>
-                {{ result.indicators?.sma | number:'1.2-2' }}
-              </p>
-            </div>
-            <div class="col-md-4">
-              <p class="mb-1">
-                <strong>RSI {{ result.indicators?.rsiPeriod }}:</strong>
-                {{ result.indicators?.rsi | number:'1.1-1' }}
-              </p>
-            </div>
-            <div class="col-md-4">
-              <p class="mb-1">
-                <strong>Bars in history:</strong>
-                {{ result.history?.count }}
-              </p>
-              <p class="mb-0 text-muted small">
-                {{ formatDate(result.history?.firstDate) }} to
-                {{ formatDate(result.history?.lastDate) }}
-              </p>
+              <h6>Indicators</h6>
+              <div class="row">
+                <div class="col-12 col-md-4">
+                  <p class="mb-1">
+                    <strong>SMA {{ result.indicators?.smaWindow }}:</strong>
+                    {{ result.indicators?.sma | number:'1.2-2' }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="mb-1">
+                    <strong>RSI {{ result.indicators?.rsiPeriod }}:</strong>
+                    {{ result.indicators?.rsi | number:'1.1-1' }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="mb-1">
+                    <strong>Bars in history:</strong>
+                    {{ result.history?.count }}
+                  </p>
+                  <p class="mb-0 text-muted small">
+                    {{ formatDate(result.history?.firstDate) }} to
+                    {{ formatDate(result.history?.lastDate) }}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Rules card -->
-      <div class="card shadow-sm">
-        <div class="card-header">
-          Screening rules
-        </div>
-        <div class="card-body">
-          <div class="row gy-2">
-            <div class="col-md-6">
-              <span [class]="getRuleBadgeClass(result.rules?.aboveSMA)">
-                Above SMA
-              </span>
-            </div>
-            <div class="col-md-6">
-              <span [class]="getRuleBadgeClass(result.rules?.belowSMA)">
-                Below SMA
-              </span>
-            </div>
-            <div class="col-md-6">
-              <span [class]="getRuleBadgeClass(result.rules?.oversold)">
-                Oversold
-              </span>
-            </div>
-            <div class="col-md-6">
-              <span [class]="getRuleBadgeClass(result.rules?.overbought)">
-                Overbought
-              </span>
-            </div>
-            <div class="col-md-6">
-              <span [class]="getRuleBadgeClass(result.rules?.cheapPE)">
-                Cheap P E
-              </span>
-            </div>
-            <div class="col-md-6">
-              <span [class]="getRuleBadgeClass(result.rules?.expensivePE)">
-                Expensive P E
-              </span>
-            </div>
-          </div>
-          @if(result.summary){
-          <div class="card mt-3">
-            <div class="card-header">
-              Summary
-            </div>
+        <!-- Summary + Rules -->
+        @if (result && result.summary) {
+        <div class="col-12 col-md-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-header">Summary</div>
             <div class="card-body">
               <p class="mb-0">{{ result.summary }}</p>
             </div>
           </div>
-          }
-
-          <p class="text-muted small mt-3">
-            Green badge means the rule is true, grey means false, pale badge means data is missing.
-          </p>
         </div>
-      </div>
+        }
+
+        <div class="col-12 col-md-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-header">Screening rules</div>
+            <div class="card-body">
+              <div class="row gy-2">
+                <div class="col-6">
+                  <span [class]="getRuleBadgeClass(result.rules?.aboveSMA)">Above SMA</span>
+                </div>
+                <div class="col-6">
+                  <span [class]="getRuleBadgeClass(result.rules?.belowSMA)">Below SMA</span>
+                </div>
+                <div class="col-6">
+                  <span [class]="getRuleBadgeClass(result.rules?.oversold)">Oversold</span>
+                </div>
+                <div class="col-6">
+                  <span [class]="getRuleBadgeClass(result.rules?.overbought)">Overbought</span>
+                </div>
+                <div class="col-6">
+                  <span [class]="getRuleBadgeClass(result.rules?.cheapPE)">Cheap P E</span>
+                </div>
+                <div class="col-6">
+                  <span [class]="getRuleBadgeClass(result.rules?.expensivePE)">Expensive P E</span>
+                </div>
+              </div>
+              <p class="text-muted small mt-3">
+                Green badge means the rule is true, grey means false, pale badge means data is missing.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- inner row -->
     </div>
     }
   </div>
