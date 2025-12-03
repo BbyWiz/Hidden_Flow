@@ -1,21 +1,27 @@
-# Lightweight Node image
-FROM node:22-alpine
+# Use a small, recent Node image
+FROM node:20-alpine
 
-# Create app directory
-WORKDIR /usr/src/app
+# Work in /app
+WORKDIR /app
 
-# Copy backend package files and install dependencies
+# Copy only root package.json (for the start script) and server package.json
+COPY package.json ./
 COPY server/package*.json ./server/
 
-WORKDIR /usr/src/app/server
+# Install server dependencies (from server/package.json)
+WORKDIR /app/server
 RUN npm install --omit=dev
 
-# Copy backend source
-COPY server/ /usr/src/app/server
+# Now copy the rest of the source
+WORKDIR /app
+COPY . .
 
-# Set port (Azure will override PORT via env var, but this is a sane default)
+# Make sure Node sees the right working dir when we run
+WORKDIR /app
+
+# Azure will override PORT, but we expose 4300 for local runs
 ENV PORT=4300
 EXPOSE 4300
 
-# Start the Express API
-CMD ["node", "server.js"]
+# Run the API using the start script we just added
+CMD ["npm", "start"]
