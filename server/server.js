@@ -1,15 +1,43 @@
+// server/server.js
 const path = require("path");
-require("dotenv").config({ path: path.join(__dirname, "..", ".env") });
 const fs = require("fs");
+
+// Load .env file if it exists (local development)
+const envPath = path.join(__dirname, "..", ".env");
+if (fs.existsSync(envPath)) {
+  require("dotenv").config({ path: envPath });
+} else {
+  // In production (Docker/Azure), environment variables come from the container/app settings
+  require("dotenv").config();
+}
+
 const express = require("express");
 const session = require("express-session");
 const cors = require("cors");
 const yahooAuth = require("./auth/yahoo_auth");
 const app = express();
-const PORT = process.env.PORT || 4300;
-const apiRouter = require("./routes/router");
+const PORT = process.env.PORT || 3000;
+
+// Startup phase - log immediately
+console.log("[STARTUP] Server initializing...");
+console.log(`[STARTUP] PORT env var: ${process.env.PORT}`);
+console.log(`[STARTUP] Final PORT: ${PORT}`);
+console.log(`[STARTUP] NODE_ENV: ${process.env.NODE_ENV}`);
+console.log(`[STARTUP] Node version: ${process.version}`);
+
+// Load router with error handling
+let apiRouter;
+try {
+  apiRouter = require("./routes/router");
+  console.log("[STARTUP] Router loaded successfully");
+} catch (err) {
+  console.error("[STARTUP] FAILED to load router:", err.message);
+  process.exit(1);
+}
+
 const openapiPath = path.join(__dirname, "openapi.yaml");
 
+console.log("[STARTUP] Express app created successfully");
 
 app.use(express.json());
 app.use(
@@ -29,16 +57,26 @@ app.use(
   })
 );
 
+// Simple startup health check (zero dependencies)
+app.get("/ping", (req, res) => {
+  res.status(200).json({ status: "pong", timestamp: new Date().toISOString() });
+});
+
+app.get("/healthz", (req, res) => {
+  res.status(200).json({ status: "ok", timestamp: new Date().toISOString() });
+});
+
 // routes
 app.use("/", yahooAuth);
 app.use("/api", apiRouter);
 
-if (app._router && app._router.stack) {
+// Log registered routes in development
+if (process.env.NODE_ENV !== "production" && app._router && app._router.stack) {
   app._router.stack
     .filter((r) => r.route)
     .forEach((r) => {
       console.log(
-        `hello!!!!!! ${Object.keys(r.route.methods)}, ${r.route.path}`
+        `[ROUTE] ${Object.keys(r.route.methods).join(",")} ${r.route.path}`
       );
     });
 }
@@ -55,6 +93,35 @@ if (fs.existsSync(openapiPath)) {
   );
 }
 
+// Angular static + SPA routes (Docker-friendly, supports both dist/ and dist/client/)
+const clientDistRoot = path.join(__dirname, "..", "client", "dist");
+let clientDistPath = clientDistRoot;
+
+if (fs.existsSync(path.join(clientDistRoot, "client", "index.html"))) {
+  clientDistPath = path.join(clientDistRoot, "client");
+} else if (fs.existsSync(path.join(clientDistRoot, "index.html"))) {
+  clientDistPath = clientDistRoot;
+}
+
+if (fs.existsSync(path.join(clientDistPath, "index.html"))) {
+  // Serve static files first
+  app.use(express.static(clientDistPath));
+
+  // SPA routes: redirect to index.html for Angular routing
+  const spaRoutes = ["/login", "/dashboard", "/documentation", "/docs-client"];
+  app.get(spaRoutes, (req, res) => {
+    res.sendFile(path.join(clientDistPath, "index.html"));
+  });
+
+  // Catch-all for SPA: any other route that's not /api or /docs, serve index.html
+  app.use((req, res, next) => {
+    if (req.path.startsWith("/api") || req.path.startsWith("/docs")) {
+      return next();
+    }
+    res.sendFile(path.join(clientDistPath, "index.html"));
+  });
+}
+
 app.get("/", (req, res) => {
   if (fs.existsSync(openapiPath)) return res.redirect("/docs");
   return res.json({
@@ -63,37 +130,48 @@ app.get("/", (req, res) => {
     docs: "/docs",
   });
 });
-// TROUBLESHOOTING
-// ["FMP_API_KEY", "FMP_URL"].forEach((k) =>
-//   console.log(`[env] ${k}=${process.env[k] ? `${k.length}` : "(MISSING)"}`)
-// );
-// const resolved = path.resolve(__dirname, "..", ".env");
-// console.log("[dotenv] resolved path:", resolved);
 
-// const result = require("dotenv").config({
-//   path: resolved,
-//   override: true,
-//   debug: true,
-// });
-// if (result.error) {
-//   console.error("[dotenv] ERROR:", result.error);
-// } else {
-//   console.log(
-//     "[dotenv] parsed keys:",
-//     result.parsed ? Object.keys(result.parsed) : []
-//   );
-// }
-
-app.use((req, res) => res.status(404).json({ error: "Not Found" }));
 app.use((err, req, res, next) => {
-  console.error(err);
-  res.status(err.status || 500).json({ error: err.message || "Internal Server Error" });
+  console.error("[ERROR] Unhandled error:", {
+    message: err.message,
+    stack: err.stack,
+    path: req.path,
+    method: req.method,
+  });
+  res
+    .status(err.status || 500)
+    .json({ error: err.message || "Internal Server Error", type: err.constructor.name });
 });
 
-app.listen(PORT, () => {
-  console.log(`API listening on http://localhost:${PORT}`);
-  if (fs.existsSync(openapiPath))
-    console.log(`Swagger UI on http://localhost:${PORT}/docs`);
+// Catch-all 404
+app.use((req, res) => {
+  console.warn(`[404] ${req.method} ${req.path}`);
+  res.status(404).json({ error: "Not Found" });
+});
+
+// Delayed startup - allow all modules to fully initialize
+const startServer = () => {
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`[STARTUP] ✓ API listening on 0.0.0.0:${PORT}`);
+    console.log(`[STARTUP] ✓ Environment: NODE_ENV=${process.env.NODE_ENV || "development"}`);
+    console.log(`[STARTUP] ✓ Client dist path: ${fs.existsSync(path.join(__dirname, "..", "client", "dist")) ? "Found" : "NOT FOUND"}`);
+    if (fs.existsSync(openapiPath))
+      console.log(`[STARTUP] ✓ Swagger UI on http://localhost:${PORT}/docs`);
+    console.log("[STARTUP] ✓✓✓ SERVER READY ✓✓✓");
+  });
+};
+
+// Start immediately (don't wait)
+process.nextTick(startServer);
+
+// Handle uncaught exceptions
+process.on("uncaughtException", (err) => {
+  console.error("[FATAL] Uncaught exception:", err);
+  process.exit(1);
+});
+
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("[FATAL] Unhandled rejection:", reason);
 });
 
 module.exports = app;

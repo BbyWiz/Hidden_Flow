@@ -1,18 +1,28 @@
 const OpenAI = require("openai");
 
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
 const DEFAULT_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
+let client = null;
+
+function getClient() {
+  if (!process.env.OPENAI_API_KEY) {
+    console.warn("[openai] OPENAI_API_KEY not set, skipping summary");
+    return null;
+  }
+  if (!client) {
+    client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  }
+  return client;
+}
 
 /**
  * Summarize a single screen payload (the JSON you return from /yahoo/screen).
  * Returns a short human readable summary string, or null if summarization
  * is disabled or fails.
  */
+
 async function summarizeScreenPayload(payload) {
-  if (!process.env.OPENAI_API_KEY) {
+  const client = getClient();
+  if (!client) {
     console.warn("[openai] OPENAI_API_KEY not set, skipping summary");
     return null;
   }

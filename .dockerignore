@@ -1,10 +1,18 @@
-node_modules
-npm-debug.log
-Dockerfile
-.dockerignore
-.git
-.gitignore
-client
-temp
-**/node_modules
+type .dockerignore
+
+node_modules/
+server/node_modules/
+client/node_modules/
+
+server/dist/
+client/dist/
+
+.vscode/
+.idea/
+
 .env
+.env.local
+.env*.local
+
+*.log
+temp/

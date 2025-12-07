@@ -1,37 +1,60 @@
-# ===== Stage 1: build Angular client =====
+###########################
+# Stage 1: Build Angular Client
+###########################
 FROM node:20-alpine AS client-build
 
-# Work inside the Angular project
-WORKDIR /usr/src/app/client
+WORKDIR /app/client
 
-# Install Angular deps
 COPY client/package*.json ./
-RUN npm ci
+RUN npm install
 
-# Copy the rest of the Angular app and build
 COPY client/ .
-RUN npm run build
+RUN npm run build || (echo "Angular build failed!" && exit 1)
 
-# ===== Stage 2: server + static Angular =====
-FROM node:20-alpine
+# Angular outputs to dist/client/browser/ - flatten this to dist/
+RUN if [ -d dist/client/browser ]; then \
+      mkdir -p /tmp/dist && \
+      cp -r dist/client/browser/* /tmp/dist/ && \
+      rm -rf dist && \
+      mv /tmp/dist dist; \
+    fi
 
-# Work inside the server project
-WORKDIR /usr/src/app/server
+RUN test -f dist/index.html || (echo "ERROR: dist/index.html not found!" && ls -laR dist/ && exit 1)
+RUN echo "✓ Client build successful"
 
-# Install server deps
+
+###########################
+# Stage 2: Build Node Server
+###########################
+FROM node:20-alpine AS server-build
+
+WORKDIR /app/server
+
 COPY server/package*.json ./
-RUN npm ci --omit=dev
+RUN npm install --omit=dev
 
-# Copy server source
 COPY server/ .
+RUN echo "✓ Server dependencies installed"
 
-# Copy built Angular app from stage 1
-# Result: /usr/src/app/client/dist/... will exist inside the container
-COPY --from=client-build /usr/src/app/client/dist /usr/src/app/client/dist
 
-# Environment and port
+###########################
+# Stage 3: Runtime Image
+###########################
+FROM node:20-alpine AS runtime
+
+WORKDIR /app
+
+# Set production mode
 ENV NODE_ENV=production
-EXPOSE 4300
+ENV PORT=3000
 
-# Start Express API
-CMD ["node", "server.js"]
+COPY --from=server-build /app/server ./server
+COPY --from=client-build /app/client/dist ./client/dist
+
+# Verify client files are present
+RUN test -f client/dist/index.html || (echo "ERROR: Client dist not copied!" && ls -laR client/dist && exit 1)
+RUN echo "✓ Runtime setup complete - client files ready"
+
+EXPOSE 3000
+
+CMD ["node", "./server/server.js"]

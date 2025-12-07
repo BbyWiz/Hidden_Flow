@@ -1,0 +1,3185 @@
+[
+  {
+    "type": "directory",
+    "name": ".",
+    "size": "4.0K",
+    "contents": [
+      {
+        "type": "file",
+        "name": "Dockerfile",
+        "size": "779"
+      },
+      {
+        "type": "file",
+        "name": "README.md",
+        "size": "3.7K"
+      },
+      {
+        "type": "file",
+        "name": "azure_webApp_config.json",
+        "size": "3.7K"
+      },
+      {
+        "type": "file",
+        "name": "build_output.txt",
+        "size": "8.9K"
+      },
+      {
+        "type": "directory",
+        "name": "client",
+        "size": "4.0K",
+        "contents": [
+          {
+            "type": "file",
+            "name": "README.md",
+            "size": "1.5K"
+          },
+          {
+            "type": "file",
+            "name": "angular.json",
+            "size": "3.6K"
+          },
+          {
+            "type": "directory",
+            "name": "dist",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "node_modules",
+            "size": "4.0K"
+          },
+          {
+            "type": "file",
+            "name": "package-lock.json",
+            "size": "425K"
+          },
+          {
+            "type": "file",
+            "name": "package.json",
+            "size": "1.3K"
+          },
+          {
+            "type": "file",
+            "name": "proxy.conf.json",
+            "size": "139"
+          },
+          {
+            "type": "directory",
+            "name": "public",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "src",
+            "size": "4.0K"
+          },
+          {
+            "type": "file",
+            "name": "tsconfig.app.json",
+            "size": "444"
+          },
+          {
+            "type": "file",
+            "name": "tsconfig.json",
+            "size": "1.0K"
+          },
+          {
+            "type": "file",
+            "name": "tsconfig.spec.json",
+            "size": "231"
+          },
+          {
+            "type": "file",
+            "name": "vite.config.ts",
+            "size": "181"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "context.txt",
+        "size": "9.0K"
+      },
+      {
+        "type": "file",
+        "name": "docker",
+        "size": "0"
+      },
+      {
+        "type": "file",
+        "name": "dockerfile.txt",
+        "size": "1.3K"
+      },
+      {
+        "type": "file",
+        "name": "error.txt",
+        "size": "2.5K"
+      },
+      {
+        "type": "file",
+        "name": "ignoreme.txt",
+        "size": "3.5K"
+      },
+      {
+        "type": "directory",
+        "name": "node_modules",
+        "size": "4.0K",
+        "contents": [
+          {
+            "type": "directory",
+            "name": "@acemir",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@ampproject",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@angular",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@angular-builders",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@angular-devkit",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@asamuzakjp",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@babel",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@bcoe",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@cspotcode",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@csstools",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@discoveryjs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@emnapi",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@esbuild",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@inquirer",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@isaacs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@istanbuljs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@jest",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@jridgewell",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@jsonjoy.com",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@kurkle",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@leichtgewicht",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@lmdb",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@msgpackr-extract",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@napi-rs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@ngtools",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@nodelib",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@parcel",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@pkgjs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@pkgr",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@rollup",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@sinclair",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@sinonjs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@tootallnate",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@tsconfig",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@tybys",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@types",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@ungap",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@unrs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@vitejs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@webassemblyjs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "@xtuc",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "abab",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "accepts",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "acorn",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "acorn-globals",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "acorn-import-phases",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "acorn-walk",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "adjust-sourcemap-loader",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "agent-base",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ajv",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ajv-formats",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ajv-keywords",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ansi-colors",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ansi-escapes",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ansi-html-community",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ansi-regex",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ansi-styles",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "anymatch",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "arg",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "argparse",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "array-flatten",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "asynckit",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "autoprefixer",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "babel-jest",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "babel-loader",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "babel-plugin-istanbul",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "babel-plugin-jest-hoist",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "babel-plugin-polyfill-corejs2",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "babel-plugin-polyfill-corejs3",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "babel-plugin-polyfill-regenerator",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "babel-preset-current-node-syntax",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "babel-preset-jest",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "balanced-match",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "baseline-browser-mapping",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "batch",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "beasties",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "bidi-js",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "big.js",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "binary-extensions",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "body-parser",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "bonjour-service",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "boolbase",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "brace-expansion",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "braces",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "browserslist",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "bs-logger",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "bser",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "buffer-from",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "bundle-name",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "bytes",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "call-bind-apply-helpers",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "call-bound",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "callsites",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "camelcase",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "caniuse-lite",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "chalk",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "char-regex",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "chokidar",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "chrome-trace-event",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ci-info",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "cjs-module-lexer",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "cli-cursor",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "cli-spinners",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "cli-truncate",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "cli-width",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "cliui",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "clone-deep",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "co",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "collect-v8-coverage",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "color-convert",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "color-name",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "colorette",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "combined-stream",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "commander",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "compressible",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "compression",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "concat-map",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "concurrently",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "connect-history-api-fallback",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "content-disposition",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "content-type",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "convert-source-map",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "cookie",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "cookie-signature",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "copy-anything",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "copy-webpack-plugin",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "core-js-compat",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "core-util-is",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "cosmiconfig",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "create-require",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "cross-spawn",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "css-loader",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "css-select",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "css-tree",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "css-what",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "cssesc",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "cssom",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "cssstyle",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "data-urls",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "debug",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "decimal.js",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "dedent",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "deepmerge",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "default-browser",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "default-browser-id",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "define-lazy-prop",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "delayed-stream",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "depd",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "destroy",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "detect-libc",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "detect-newline",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "detect-node",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "diff",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "dns-packet",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "dom-serializer",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "domelementtype",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "domexception",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "domhandler",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "domutils",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "dotenv",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "dunder-proto",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "eastasianwidth",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ee-first",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "electron-to-chromium",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "emittery",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "emoji-regex",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "emojis-list",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "encodeurl",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "enhanced-resolve",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "entities",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "env-paths",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "environment",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "errno",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "error-ex",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "es-define-property",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "es-errors",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "es-module-lexer",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "es-object-atoms",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "es-set-tostringtag",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "esbuild",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "esbuild-wasm",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "escalade",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "escape-html",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "escape-string-regexp",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "escodegen",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "eslint-scope",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "esprima",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "esrecurse",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "estraverse",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "esutils",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "etag",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "eventemitter3",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "events",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "execa",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "exit-x",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "expect",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "express",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "fast-deep-equal",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "fast-glob",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "fast-json-stable-stringify",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "fast-uri",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "fastq",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "faye-websocket",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "fb-watchman",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "fdir",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "fill-range",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "finalhandler",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "find-up",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "flat",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "follow-redirects",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "foreground-child",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "form-data",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "forwarded",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "fraction.js",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "fresh",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "fs.realpath",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "function-bind",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "gensync",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "get-caller-file",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "get-east-asian-width",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "get-intrinsic",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "get-package-type",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "get-proto",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "get-stream",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "glob",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "glob-parent",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "glob-to-regex.js",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "glob-to-regexp",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "gopd",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "graceful-fs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "handle-thing",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "handlebars",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "has-flag",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "has-symbols",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "has-tostringtag",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "hasown",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "hpack.js",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "html-encoding-sniffer",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "html-escaper",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "htmlparser2",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "http-deceiver",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "http-errors",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "http-parser-js",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "http-proxy",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "http-proxy-agent",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "http-proxy-middleware",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "https-proxy-agent",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "human-signals",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "hyperdyperid",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "iconv-lite",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "icss-utils",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "image-size",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "immutable",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "import-fresh",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "import-local",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "imurmurhash",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "inflight",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "inherits",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ipaddr.js",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-arrayish",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-binary-path",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-core-module",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-docker",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-extglob",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-fullwidth-code-point",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-generator-fn",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-glob",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-inside-container",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-interactive",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-network-error",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-number",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-plain-obj",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-plain-object",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-potential-custom-element-name",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-stream",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-unicode-supported",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-what",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "is-wsl",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "isarray",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "isexe",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "isobject",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "istanbul-lib-coverage",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "istanbul-lib-instrument",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "istanbul-lib-report",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "istanbul-lib-source-maps",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "istanbul-reports",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jackspeak",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-changed-files",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-circus",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-cli",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-config",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-diff",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-docblock",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-each",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-environment-jsdom",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-environment-node",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-haste-map",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-leak-detector",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-matcher-utils",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-message-util",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-mock",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-pnp-resolver",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-preset-angular",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-regex-util",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-resolve",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-resolve-dependencies",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-runner",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-runtime",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-snapshot",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-util",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-validate",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-watcher",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jest-worker",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jiti",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "js-tokens",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "js-yaml",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jsdom",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jsesc",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "json-parse-even-better-errors",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "json-schema-traverse",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "json5",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "jsonc-parser",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "karma-source-map-support",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "kind-of",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "launch-editor",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "less",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "less-loader",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "leven",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "license-webpack-plugin",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "lines-and-columns",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "listr2",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "lmdb",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "loader-runner",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "loader-utils",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "locate-path",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "lodash",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "lodash.debounce",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "lodash.memoize",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "log-symbols",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "log-update",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "lru-cache",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "magic-string",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "make-dir",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "make-error",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "makeerror",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "math-intrinsics",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "mdn-data",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "media-typer",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "memfs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "merge-descriptors",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "merge-stream",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "merge2",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "methods",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "micromatch",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "mime",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "mime-db",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "mime-types",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "mimic-fn",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "mimic-function",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "mini-css-extract-plugin",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "minimalistic-assert",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "minimatch",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "minimist",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "minipass",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "mrmime",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ms",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "msgpackr",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "msgpackr-extract",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "multicast-dns",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "mute-stream",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "nanoid",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "napi-postinstall",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "natural-compare",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "needle",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "negotiator",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "neo-async",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "node-addon-api",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "node-forge",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "node-gyp-build-optional-packages",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "node-int64",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "node-releases",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "normalize-path",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "normalize-range",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "npm-run-path",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "nth-check",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "nwsapi",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "object-inspect",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "obuf",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "on-finished",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "on-headers",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "once",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "onetime",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "open",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ora",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ordered-binary",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "p-limit",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "p-locate",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "p-retry",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "p-try",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "package-json-from-dist",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "parent-module",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "parse-json",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "parse-node-version",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "parse5",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "parse5-html-rewriting-stream",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "parse5-sax-parser",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "parseurl",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "path-exists",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "path-is-absolute",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "path-key",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "path-parse",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "path-scurry",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "path-to-regexp",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "picocolors",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "picomatch",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "pify",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "pirates",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "piscina",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "pkg-dir",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "postcss",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "postcss-loader",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "postcss-media-query-parser",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "postcss-modules-extract-imports",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "postcss-modules-local-by-default",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "postcss-modules-scope",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "postcss-modules-values",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "postcss-selector-parser",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "postcss-value-parser",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "pretty-format",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "process-nextick-args",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "proxy-addr",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "prr",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "psl",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "punycode",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "pure-rand",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "qs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "querystringify",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "queue-microtask",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "randombytes",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "range-parser",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "raw-body",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "react-is",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "readable-stream",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "readdirp",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "reflect-metadata",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "regenerate",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "regenerate-unicode-properties",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "regex-parser",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "regexpu-core",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "regjsgen",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "regjsparser",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "require-directory",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "require-from-string",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "requires-port",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "resolve",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "resolve-cwd",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "resolve-from",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "resolve-url-loader",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "restore-cursor",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "retry",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "reusify",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "rfdc",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "rollup",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "run-applescript",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "run-parallel",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "rxjs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "safe-buffer",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "safer-buffer",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "sass",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "sass-loader",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "sax",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "saxes",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "schema-utils",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "select-hose",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "selfsigned",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "semver",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "send",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "serialize-javascript",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "serve-index",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "serve-static",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "setprototypeof",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "shallow-clone",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "shebang-command",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "shebang-regex",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "shell-quote",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "side-channel",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "side-channel-list",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "side-channel-map",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "side-channel-weakmap",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "signal-exit",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "slash",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "slice-ansi",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "sockjs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "source-map",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "source-map-js",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "source-map-loader",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "source-map-support",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "spdy",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "spdy-transport",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "sprintf-js",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "stack-utils",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "statuses",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "stdin-discarder",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "string-length",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "string-width",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "string-width-cjs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "string_decoder",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "strip-ansi",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "strip-ansi-cjs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "strip-bom",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "strip-final-newline",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "strip-json-comments",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "supports-color",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "supports-preserve-symlinks-flag",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "symbol-tree",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "synckit",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "tapable",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "terser",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "terser-webpack-plugin",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "test-exclude",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "thingies",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "thunky",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "tinyglobby",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "tldts",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "tldts-core",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "tmpl",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "to-regex-range",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "toidentifier",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "tough-cookie",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "tr46",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "tree-dump",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "tree-kill",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ts-jest",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ts-node",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "tsconfig-paths",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "tslib",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "type-detect",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "type-fest",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "type-is",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "typed-assert",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "typescript",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "uglify-js",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "undici-types",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "unicode-canonical-property-names-ecmascript",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "unicode-match-property-ecmascript",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "unicode-match-property-value-ecmascript",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "unicode-property-aliases-ecmascript",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "universalify",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "unpipe",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "unrs-resolver",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "update-browserslist-db",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "url-parse",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "util-deprecate",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "utils-merge",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "uuid",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "v8-compile-cache-lib",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "v8-to-istanbul",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "vary",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "vite",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "w3c-xmlserializer",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "walker",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "watchpack",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "wbuf",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "weak-lru-cache",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "webidl-conversions",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "webpack",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "webpack-dev-middleware",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "webpack-dev-server",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "webpack-merge",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "webpack-sources",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "webpack-subresource-integrity",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "websocket-driver",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "websocket-extensions",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "whatwg-encoding",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "whatwg-mimetype",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "whatwg-url",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "which",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "wildcard",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "wordwrap",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "wrap-ansi",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "wrap-ansi-cjs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "wrappy",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "write-file-atomic",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "ws",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "wsl-utils",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "xml-name-validator",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "xmlchars",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "y18n",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "yallist",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "yargs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "yargs-parser",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "yn",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "yocto-queue",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "yoctocolors-cjs",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "zone.js",
+            "size": "4.0K"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "package-lock.json",
+        "size": "607K"
+      },
+      {
+        "type": "file",
+        "name": "package.json",
+        "size": "732"
+      },
+      {
+        "type": "directory",
+        "name": "server",
+        "size": "4.0K",
+        "contents": [
+          {
+            "type": "directory",
+            "name": "app",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "auth",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "models",
+            "size": "4.0K"
+          },
+          {
+            "type": "directory",
+            "name": "node_modules",
+            "size": "4.0K"
+          },
+          {
+            "type": "file",
+            "name": "openapi.yaml",
+            "size": "11K"
+          },
+          {
+            "type": "file",
+            "name": "package-lock.json",
+            "size": "65K"
+          },
+          {
+            "type": "file",
+            "name": "package.json",
+            "size": "619"
+          },
+          {
+            "type": "directory",
+            "name": "routes",
+            "size": "4.0K"
+          },
+          {
+            "type": "file",
+            "name": "server.js",
+            "size": "2.4K"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "structure.json",
+        "size": "0"
+      }
+    ]
+  },
+  {
+    "type": "report",
+    "directories": 609,
+    "files": 25
+  }
+]
