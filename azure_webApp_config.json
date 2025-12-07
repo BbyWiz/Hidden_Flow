@@ -1,5 +1,5 @@
 {
-  "command-ran":"az webapp config show --name screenapp --resource-group Screener",
+  "command-ran": "az webapp config show --name screenapp --resource-group Screener",
   "acrUseManagedIdentityCreds": false,
   "acrUserManagedIdentityId": null,
   "alwaysOn": true,
@@ -130,4 +130,3 @@
   "windowsFxVersion": null,
   "xManagedServiceIdentityId": null
 }
-PS /home/lawrence> 
