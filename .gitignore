@@ -7,3 +7,4 @@ openapi.yaml
 /temp/*
 node_modules
 .dockerignore
+Dockerfile
